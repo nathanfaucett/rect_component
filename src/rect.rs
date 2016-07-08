@@ -9,10 +9,7 @@ use rect_manager::RectManager;
 
 
 struct RectData {
-
     entity: Option<Entity>,
-    rect_manager: Option<RectManager>,
-
     width: f32,
     height: f32,
 }
@@ -27,21 +24,11 @@ impl Rect {
     pub fn new() -> Self {
         Rect {
             data: Arc::new(RefCell::new(RectData {
-
                 entity: None,
-                rect_manager: None,
-
                 width: 1f32,
                 height: 1f32,
             }))
         }
-    }
-
-    pub fn rect_manager(&self) -> Option<RectManager> {
-        self.data.borrow().rect_manager.clone()
-    }
-    pub fn set_rect_manager(&self, rect_manager: Option<RectManager>) {
-        self.data.borrow_mut().rect_manager = rect_manager;
     }
 
     pub fn width(&self) -> f32 { self.data.borrow().width }
