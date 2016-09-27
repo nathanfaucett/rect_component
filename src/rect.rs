@@ -1,5 +1,5 @@
 use collections::boxed::Box;
-use alloc::arc::Arc;
+use alloc::rc::Rc;
 use core::cell::RefCell;
 
 use transform2d_component::Transform2D;
@@ -17,13 +17,13 @@ struct RectData {
 
 #[derive(Clone)]
 pub struct Rect {
-    data: Arc<RefCell<RectData>>,
+    data: Rc<RefCell<RectData>>,
 }
 
 impl Rect {
     pub fn new() -> Self {
         Rect {
-            data: Arc::new(RefCell::new(RectData {
+            data: Rc::new(RefCell::new(RectData {
                 entity: None,
                 width: 1f32,
                 height: 1f32,

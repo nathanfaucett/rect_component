@@ -1,5 +1,5 @@
 use collections::boxed::Box;
-use alloc::arc::Arc;
+use alloc::rc::Rc;
 use core::cell::RefCell;
 
 use scene_graph::{Scene, Component, ComponentManager, Id};
@@ -13,13 +13,13 @@ struct RectManagerData {
 
 #[derive(Clone)]
 pub struct RectManager {
-    data: Arc<RefCell<RectManagerData>>,
+    data: Rc<RefCell<RectManagerData>>,
 }
 
 impl RectManager {
     pub fn new() -> Self {
         RectManager {
-            data: Arc::new(RefCell::new(RectManagerData {
+            data: Rc::new(RefCell::new(RectManagerData {
                 scene: None,
                 components: 0usize,
             }))
