@@ -1,12 +1,11 @@
 #![no_std]
-#![feature(collections, alloc)]
+#![feature(collections)]
 
 
-extern crate alloc;
 extern crate collections;
 
-extern crate transform2d_component;
-extern crate transform3d_component;
+extern crate shared;
+extern crate transform_components;
 extern crate scene_graph;
 
 

@@ -11,11 +11,11 @@ repository = "https://github.com/nathanfaucett/rs-rect_component.git"
 homepage = "https://github.com/nathanfaucett/rs-rect_component"
 
 
-[dependencies.transform2d_component]
-git = "https://github.com/nathanfaucett/rs-transform2d_component.git"
-
-[dependencies.transform3d_component]
-git = "https://github.com/nathanfaucett/rs-transform3d_component.git"
+[dependencies.transform_components]
+git = "https://github.com/nathanfaucett/rs-transform_components.git"
 
 [dependencies.scene_graph]
 git = "https://github.com/nathanfaucett/rs-scene_graph.git"
+
+[dependencies.shared]
+git = "https://github.com/nathanfaucett/rs-shared.git"
