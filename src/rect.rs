@@ -1,8 +1,9 @@
-use collections::boxed::Box;
+use alloc::boxed::Box;
 
 use shared::Shared;
 use transform_components::{Transform2D, Transform3D};
 use scene_graph::{Entity, Component, ComponentManager, Id};
+
 use rect_manager::RectManager;
 
 
